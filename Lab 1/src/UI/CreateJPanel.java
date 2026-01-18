@@ -5,6 +5,7 @@
 package UI;
 
 import Model.Product;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -32,31 +33,31 @@ public class CreateJPanel extends javax.swing.JPanel {
 
         lblTitle = new javax.swing.JLabel();
         lblName = new javax.swing.JLabel();
-        fieldDecsription = new javax.swing.JTextField();
+        fieldDescription = new javax.swing.JTextField();
         lblDescription = new javax.swing.JLabel();
         lblAvailbility = new javax.swing.JLabel();
         lblPrice = new javax.swing.JLabel();
         fieldName = new javax.swing.JTextField();
         fieldAvailability = new javax.swing.JTextField();
         fieldPrice = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        lblManufactureStreet = new javax.swing.JLabel();
-        lblManufactureUnit = new javax.swing.JLabel();
-        lblManufactureCity = new javax.swing.JLabel();
-        lblManufactureZip = new javax.swing.JLabel();
-        lblManuStreet = new javax.swing.JTextField();
-        lblManuUnit = new javax.swing.JTextField();
-        lblManuCity = new javax.swing.JTextField();
-        lblManuZip = new javax.swing.JTextField();
-        lblShippingName = new javax.swing.JLabel();
-        fieldManufactureName = new javax.swing.JTextField();
+        lblManuAddress = new javax.swing.JLabel();
+        lblShippingAddress = new javax.swing.JLabel();
+        lblManuStreet = new javax.swing.JLabel();
+        lblManuUnit = new javax.swing.JLabel();
+        lblManuCity = new javax.swing.JLabel();
+        lblManuZip = new javax.swing.JLabel();
+        fieldManuStreet = new javax.swing.JTextField();
+        fieldManuUnit = new javax.swing.JTextField();
+        fieldManuCity = new javax.swing.JTextField();
+        fieldManuZip = new javax.swing.JTextField();
+        lblShippingStreet = new javax.swing.JLabel();
+        fieldShippingStreet = new javax.swing.JTextField();
         lblShippingUnit = new javax.swing.JLabel();
-        fieldManufactureUnit = new javax.swing.JTextField();
+        fieldShippingUnit = new javax.swing.JTextField();
         lblShippingCity = new javax.swing.JLabel();
-        fieldManufactureCity = new javax.swing.JTextField();
+        fieldShippingCity = new javax.swing.JTextField();
         lblShippingZip = new javax.swing.JLabel();
-        fieldManufactureZip = new javax.swing.JTextField();
+        fieldShippingZip = new javax.swing.JTextField();
         btnSave = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 204));
@@ -72,25 +73,25 @@ public class CreateJPanel extends javax.swing.JPanel {
 
         lblPrice.setText("Price");
 
-        jLabel1.setText("Manufacture Address");
+        lblManuAddress.setText("Manufacture Address");
 
-        jLabel2.setText("Shipping Address");
+        lblShippingAddress.setText("Shipping Address");
 
-        lblManufactureStreet.setText("Street Name");
+        lblManuStreet.setText("Street Name");
 
-        lblManufactureUnit.setText("Unit Number");
+        lblManuUnit.setText("Unit Number");
 
-        lblManufactureCity.setText("City");
+        lblManuCity.setText("City");
 
-        lblManufactureZip.setText("Zip Code");
+        lblManuZip.setText("Zip Code");
 
-        lblManuUnit.addActionListener(new java.awt.event.ActionListener() {
+        fieldManuUnit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lblManuUnitActionPerformed(evt);
+                fieldManuUnitActionPerformed(evt);
             }
         });
 
-        lblShippingName.setText("Street Name");
+        lblShippingStreet.setText("Street Name");
 
         lblShippingUnit.setText("Unit Number ");
 
@@ -99,6 +100,11 @@ public class CreateJPanel extends javax.swing.JPanel {
         lblShippingZip.setText("Zip Code");
 
         btnSave.setText("Save");
+        btnSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSaveActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -114,13 +120,13 @@ public class CreateJPanel extends javax.swing.JPanel {
                                     .addComponent(lblPrice)
                                     .addComponent(lblDescription)
                                     .addComponent(lblName)
-                                    .addComponent(jLabel1)
+                                    .addComponent(lblManuAddress)
                                     .addComponent(lblAvailbility))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(64, 64, 64)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(fieldDecsription, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(fieldDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(fieldName, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(fieldAvailability, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(fieldPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -128,8 +134,8 @@ public class CreateJPanel extends javax.swing.JPanel {
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel2)
-                                            .addComponent(lblShippingName)
+                                            .addComponent(lblShippingAddress)
+                                            .addComponent(lblShippingStreet)
                                             .addComponent(lblShippingUnit)
                                             .addComponent(lblShippingCity)
                                             .addComponent(lblShippingZip))
@@ -138,34 +144,35 @@ public class CreateJPanel extends javax.swing.JPanel {
                                 .addContainerGap()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addComponent(lblManufactureUnit)
+                                        .addComponent(lblManuUnit)
                                         .addGap(18, 18, 18)
-                                        .addComponent(lblManuUnit, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(fieldManuUnit, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(lblManufactureCity)
-                                            .addComponent(lblManufactureZip))
+                                            .addComponent(lblManuCity)
+                                            .addComponent(lblManuZip))
                                         .addGap(37, 37, 37)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(lblManuCity, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
-                                            .addComponent(lblManuZip)))
+                                            .addComponent(fieldManuCity, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
+                                            .addComponent(fieldManuZip)))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(lblManufactureStreet)
+                                        .addComponent(lblManuStreet)
                                         .addGap(18, 18, 18)
-                                        .addComponent(lblManuStreet, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(fieldManuStreet, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(fieldManufactureCity, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
-                            .addComponent(fieldManufactureName)
-                            .addComponent(fieldManufactureZip)
-                            .addComponent(fieldManufactureUnit)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(152, 152, 152)
-                        .addComponent(btnSave))
+                            .addComponent(fieldShippingCity, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
+                            .addComponent(fieldShippingStreet)
+                            .addComponent(fieldShippingZip)
+                            .addComponent(fieldShippingUnit)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(171, 171, 171)
                         .addComponent(lblTitle)))
                 .addGap(34, 34, 34))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(203, 203, 203)
+                .addComponent(btnSave)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -179,7 +186,7 @@ public class CreateJPanel extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblDescription)
-                    .addComponent(fieldDecsription, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fieldDescription, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblAvailbility)
@@ -190,69 +197,127 @@ public class CreateJPanel extends javax.swing.JPanel {
                     .addComponent(fieldPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
+                    .addComponent(lblManuAddress)
+                    .addComponent(lblShippingAddress))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblManufactureStreet)
-                    .addComponent(lblManuStreet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblShippingName)
-                    .addComponent(fieldManufactureName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblManuStreet)
+                    .addComponent(fieldManuStreet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblShippingStreet)
+                    .addComponent(fieldShippingStreet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblManufactureUnit)
-                    .addComponent(lblManuUnit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblManuUnit)
+                    .addComponent(fieldManuUnit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblShippingUnit)
-                    .addComponent(fieldManufactureUnit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fieldShippingUnit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblManufactureCity)
-                    .addComponent(lblManuCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblManuCity)
+                    .addComponent(fieldManuCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblShippingCity)
-                    .addComponent(fieldManufactureCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fieldShippingCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblManufactureZip)
-                    .addComponent(lblManuZip, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblManuZip)
+                    .addComponent(fieldManuZip, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblShippingZip)
-                    .addComponent(fieldManufactureZip, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fieldShippingZip, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnSave)
                 .addContainerGap(28, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void lblManuUnitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lblManuUnitActionPerformed
+    private void fieldManuUnitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldManuUnitActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_lblManuUnitActionPerformed
+    }//GEN-LAST:event_fieldManuUnitActionPerformed
+
+    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
+        // TODO add your handling code here:
+        
+        // Step 1: collect text from the field
+        String name = fieldName.getText();
+        String description = fieldDescription.getText();
+        String avail = fieldAvailability.getText();
+        String price = fieldPrice.getText();
+        
+        String manuStreet = fieldManuStreet.getText();
+        String manuUnit = fieldManuUnit.getText();
+        String manuCity = fieldManuCity.getText();
+        String manuZipCode = fieldManuZip.getText();
+        
+        String shippingStreet = fieldShippingStreet.getText();
+        String shippingUnit = fieldShippingUnit.getText();
+        String shippingCity = fieldShippingCity.getText();
+        String shippingZipCode = fieldShippingZip.getText();      
+        
+        // Step 2: put those information to product
+        product.setName(name);
+        product.setDescription(description);
+        product.setAvailNum(avail);
+        product.setPrice(price);
+        
+        product.getManufactureAddress().setStreetName(manuStreet);
+        product.getManufactureAddress().setUnitNum(manuUnit);
+        product.getManufactureAddress().setCity(manuCity);
+        product.getManufactureAddress().setZipCode(manuZipCode);
+        
+        product.getShippingAddress().setStreetName(shippingStreet);
+        product.getShippingAddress().setUnitNum(shippingUnit);
+        product.getShippingAddress().setCity(shippingCity);
+        product.getShippingAddress().setZipCode(shippingZipCode);
+        
+        //Step 3: set a little pop-up message
+        
+        JOptionPane.showMessageDialog(this,"Successfully Saved!");
+        
+        //Step 4:  clear all textfield.
+        fieldName.setText("");
+        fieldDescription.setText("");
+        fieldAvailability.setText("");
+        fieldPrice.setText("");
+
+        fieldManuStreet.setText("");
+        fieldManuUnit.setText("");
+        fieldManuCity.setText("");
+        fieldManuZip.setText("");
+
+        fieldShippingStreet.setText("");
+        fieldShippingUnit.setText("");
+        fieldShippingCity.setText("");
+        fieldShippingZip.setText("");
+        
+        
+    }//GEN-LAST:event_btnSaveActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSave;
     private javax.swing.JTextField fieldAvailability;
-    private javax.swing.JTextField fieldDecsription;
-    private javax.swing.JTextField fieldManufactureCity;
-    private javax.swing.JTextField fieldManufactureName;
-    private javax.swing.JTextField fieldManufactureUnit;
-    private javax.swing.JTextField fieldManufactureZip;
+    private javax.swing.JTextField fieldDescription;
+    private javax.swing.JTextField fieldManuCity;
+    private javax.swing.JTextField fieldManuStreet;
+    private javax.swing.JTextField fieldManuUnit;
+    private javax.swing.JTextField fieldManuZip;
     private javax.swing.JTextField fieldName;
     private javax.swing.JTextField fieldPrice;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JTextField fieldShippingCity;
+    private javax.swing.JTextField fieldShippingStreet;
+    private javax.swing.JTextField fieldShippingUnit;
+    private javax.swing.JTextField fieldShippingZip;
     private javax.swing.JLabel lblAvailbility;
     private javax.swing.JLabel lblDescription;
-    private javax.swing.JTextField lblManuCity;
-    private javax.swing.JTextField lblManuStreet;
-    private javax.swing.JTextField lblManuUnit;
-    private javax.swing.JTextField lblManuZip;
-    private javax.swing.JLabel lblManufactureCity;
-    private javax.swing.JLabel lblManufactureStreet;
-    private javax.swing.JLabel lblManufactureUnit;
-    private javax.swing.JLabel lblManufactureZip;
+    private javax.swing.JLabel lblManuAddress;
+    private javax.swing.JLabel lblManuCity;
+    private javax.swing.JLabel lblManuStreet;
+    private javax.swing.JLabel lblManuUnit;
+    private javax.swing.JLabel lblManuZip;
     private javax.swing.JLabel lblName;
     private javax.swing.JLabel lblPrice;
+    private javax.swing.JLabel lblShippingAddress;
     private javax.swing.JLabel lblShippingCity;
-    private javax.swing.JLabel lblShippingName;
+    private javax.swing.JLabel lblShippingStreet;
     private javax.swing.JLabel lblShippingUnit;
     private javax.swing.JLabel lblShippingZip;
     private javax.swing.JLabel lblTitle;

@@ -8,7 +8,7 @@ package Model;
  *
  * @author fabio
  */
-class Address {
+public class Address {
     String StreetName;
     String unitNum;
     String city;
