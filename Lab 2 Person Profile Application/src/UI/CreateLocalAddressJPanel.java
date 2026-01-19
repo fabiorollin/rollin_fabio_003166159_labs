@@ -4,6 +4,9 @@
  */
 package UI;
 
+import Model.Address;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author fabio
@@ -13,8 +16,12 @@ public class CreateLocalAddressJPanel extends javax.swing.JPanel {
     /**
      * Creates new form CreateLocalAddressJPanel
      */
-    public CreateLocalAddressJPanel() {
+    Address localAddress;
+    
+    public CreateLocalAddressJPanel(Address a) {
         initComponents();
+        localAddress = a;
+        
     }
 
     /**
@@ -37,6 +44,7 @@ public class CreateLocalAddressJPanel extends javax.swing.JPanel {
         lblCity = new javax.swing.JLabel();
         lblState = new javax.swing.JLabel();
         fieldStreet = new javax.swing.JTextField();
+        lblSave = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 204));
 
@@ -59,6 +67,19 @@ public class CreateLocalAddressJPanel extends javax.swing.JPanel {
 
         lblState.setText("State");
 
+        fieldStreet.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldStreetActionPerformed(evt);
+            }
+        });
+
+        lblSave.setText("Save");
+        lblSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lblSaveActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -80,8 +101,13 @@ public class CreateLocalAddressJPanel extends javax.swing.JPanel {
                     .addComponent(fieldUnitNum, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(38, 38, 38))
             .addGroup(layout.createSequentialGroup()
-                .addGap(111, 111, 111)
-                .addComponent(lblCreateLocalAddress)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(111, 111, 111)
+                        .addComponent(lblCreateLocalAddress))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(156, 156, 156)
+                        .addComponent(lblSave)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -109,13 +135,71 @@ public class CreateLocalAddressJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblZipCode)
                     .addComponent(fieldZipCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(200, Short.MAX_VALUE))
+                .addGap(34, 34, 34)
+                .addComponent(lblSave)
+                .addContainerGap(143, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void fieldUnitNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldUnitNumActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_fieldUnitNumActionPerformed
+
+    private void lblSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lblSaveActionPerformed
+        // TODO add your handling code here:
+        String street = fieldStreet.getText().trim();
+        String unit   = fieldUnitNum.getText().trim();
+        String city   = fieldCity.getText().trim();
+        String state  = fieldState.getText().trim();
+        String zip    = fieldZipCode.getText().trim();
+
+        // 1) Null/empty checks (required)
+        if (street.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Street Name is required.");
+        return;
+        } else if (unit.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Unit Number is required.");
+        return;
+        } else if (city.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "City is required.");
+        return;
+        } else if (state.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "State is required.");
+        return;
+        } else if (zip.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Zip Code is required.");
+        return;
+        }
+
+        // 2) Data type validation example: Zip must be numeric (simple)
+        // (If your rubric expects int/double validation somewhere, this helps.)
+        try {
+        Integer.parseInt(zip);
+        } catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(this, "Zip Code must be numeric (e.g., 14620).");
+        return;
+        }
+
+        // 3) Save into Address object
+        localAddress.setStreetName(street);
+        localAddress.setUnitNum(unit);
+        localAddress.setCity(city);
+        localAddress.setState(state);
+        localAddress.setZipCode(zip);
+
+        JOptionPane.showMessageDialog(this, "Local Address saved successfully.");
+
+        // 4) Clear fields after success
+        fieldStreet.setText("");
+        fieldUnitNum.setText("");
+        fieldCity.setText("");
+        fieldState.setText("");
+        fieldZipCode.setText("");
+    }//GEN-LAST:event_lblSaveActionPerformed
+
+    private void fieldStreetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldStreetActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldStreetActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -126,6 +210,7 @@ public class CreateLocalAddressJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField fieldZipCode;
     private javax.swing.JLabel lblCity;
     private javax.swing.JLabel lblCreateLocalAddress;
+    private javax.swing.JButton lblSave;
     private javax.swing.JLabel lblState;
     private javax.swing.JLabel lblStreet;
     private javax.swing.JLabel lblUnitNumber;

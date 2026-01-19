@@ -4,6 +4,8 @@
  */
 package UI;
 
+import Model.Address;
+
 /**
  *
  * @author fabio
@@ -13,8 +15,11 @@ public class ViewLocalAddresssJPanel extends javax.swing.JPanel {
     /**
      * Creates new form ViewLocalAddresssJPanel
      */
-    public ViewLocalAddresssJPanel() {
+    Address localAddress;
+    
+    public ViewLocalAddresssJPanel(Address localAddress) {
         initComponents();
+        this.localAddress = localAddress;
     }
 
     /**

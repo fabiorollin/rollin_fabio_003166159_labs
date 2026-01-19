@@ -4,6 +4,8 @@
  */
 package UI;
 
+import Model.Bank;
+
 /**
  *
  * @author fabio
@@ -13,8 +15,10 @@ public class ViewBankAccountJPanel extends javax.swing.JPanel {
     /**
      * Creates new form ViewBankAccountJPanel
      */
-    public ViewBankAccountJPanel() {
+    Bank bankAccount;
+    public ViewBankAccountJPanel(Bank bankAccount) {
         initComponents();
+        this.bankAccount = bankAccount;
     }
 
     /**

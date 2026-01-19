@@ -4,6 +4,8 @@
  */
 package UI;
 
+import Model.Address;
+
 /**
  *
  * @author fabio
@@ -13,8 +15,10 @@ public class ViewHomeAddressJPanel extends javax.swing.JPanel {
     /**
      * Creates new form ViewHomeAddressJPanel
      */
-    public ViewHomeAddressJPanel() {
+    Address homeAddress;
+    public ViewHomeAddressJPanel(Address homeAddress) {
         initComponents();
+        this.homeAddress = homeAddress;
     }
 
     /**

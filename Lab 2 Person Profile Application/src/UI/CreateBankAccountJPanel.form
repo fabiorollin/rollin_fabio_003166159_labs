@@ -42,9 +42,17 @@
               </Group>
               <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
           </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
-              <Component id="lblCreateBankAccount" min="-2" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
+                      <Component id="lblCreateBankAccount" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="148" max="-2" attributes="0"/>
+                      <Component id="btnSave" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -84,7 +92,9 @@
                   <Component id="lblAccountType" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="fieldAccountType" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="172" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btnSave" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="131" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -114,9 +124,6 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblRoutingNumber">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Routing Number"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblBalance">
       <Properties>
@@ -142,6 +149,14 @@
     <Component class="javax.swing.JTextField" name="fieldBalance">
     </Component>
     <Component class="javax.swing.JTextField" name="fieldAccountType">
+    </Component>
+    <Component class="javax.swing.JButton" name="btnSave">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Save"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSaveActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

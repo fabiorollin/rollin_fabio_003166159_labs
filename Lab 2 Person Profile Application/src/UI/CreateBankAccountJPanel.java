@@ -4,6 +4,9 @@
  */
 package UI;
 
+import Model.Bank;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author fabio
@@ -13,8 +16,12 @@ public class CreateBankAccountJPanel extends javax.swing.JPanel {
     /**
      * Creates new form CreateBankAccountJPanel
      */
-    public CreateBankAccountJPanel() {
+    Bank bank;
+    
+    public CreateBankAccountJPanel(Bank b) {
         initComponents();
+        bank = b;
+        
     }
 
     /**
@@ -39,6 +46,7 @@ public class CreateBankAccountJPanel extends javax.swing.JPanel {
         fieldRoutingNumber = new javax.swing.JTextField();
         fieldBalance = new javax.swing.JTextField();
         fieldAccountType = new javax.swing.JTextField();
+        btnSave = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 204));
 
@@ -51,8 +59,6 @@ public class CreateBankAccountJPanel extends javax.swing.JPanel {
 
         lblAccountNumber.setText("Account Number");
 
-        lblRoutingNumber.setText("Routing Number");
-
         lblBalance.setText("Balance");
 
         lblAccountType.setText("Account Type");
@@ -60,6 +66,13 @@ public class CreateBankAccountJPanel extends javax.swing.JPanel {
         fieldAccountHolderName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fieldAccountHolderNameActionPerformed(evt);
+            }
+        });
+
+        btnSave.setText("Save");
+        btnSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSaveActionPerformed(evt);
             }
         });
 
@@ -86,8 +99,13 @@ public class CreateBankAccountJPanel extends javax.swing.JPanel {
                     .addComponent(fieldAccountHolderName, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(38, 38, 38))
             .addGroup(layout.createSequentialGroup()
-                .addGap(111, 111, 111)
-                .addComponent(lblCreateBankAccount)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(111, 111, 111)
+                        .addComponent(lblCreateBankAccount))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(148, 148, 148)
+                        .addComponent(btnSave)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -119,7 +137,9 @@ public class CreateBankAccountJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblAccountType)
                     .addComponent(fieldAccountType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(172, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btnSave)
+                .addContainerGap(131, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -127,8 +147,84 @@ public class CreateBankAccountJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_fieldAccountHolderNameActionPerformed
 
+    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
+        // TODO add your handling code here:
+        String bankName = fieldBankName.getText().trim();
+        String holder   = fieldAccountHolderName.getText().trim();
+        String accNum   = fieldAccountNumber.getText().trim();
+        String routing  = fieldRoutingNumber.getText().trim();
+        String balText  = fieldBalance.getText().trim();
+        String type     = fieldAccountType.getText().trim();
+
+        // 1) Null / empty validation
+        if (bankName.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Bank Name is required.");
+        return;
+        } else if (holder.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Account Holder Name is required.");
+        return;
+        } else if (accNum.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Account Number is required.");
+        return;
+        } else if (routing.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Routing Number is required.");
+        return;
+        } else if (balText.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Balance is required.");
+        return;
+        } else if (type.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Account Type is required.");
+        return;
+        }
+
+        // 2) Numeric validation
+        if (!accNum.matches("\\d+")) {
+        JOptionPane.showMessageDialog(this, "Account Number must be numeric.");
+        return;
+        }
+
+        if (!routing.matches("\\d+")) {
+        JOptionPane.showMessageDialog(this, "Routing Number must be numeric.");
+        return;
+        }
+
+        double balance;
+        try {
+        balance = Double.parseDouble(balText);
+        if (balance < 0) {
+            JOptionPane.showMessageDialog(this, "Balance cannot be negative.");
+            return;
+        }
+        } catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(this, "Balance must be a number (e.g., 2500.75).");
+        return;
+        }
+
+        // 3) Save into Bank object
+        bank.setBankName(bankName);
+        bank.setAccountHolderName(holder);
+        bank.setAccountNumber(accNum);
+        bank.setRoutingNumber(routing);
+        bank.setBalance(balance);
+        bank.setAccountType(type);
+
+        JOptionPane.showMessageDialog(this, "Bank Account saved successfully.");
+
+        // 4) Clear fields after save
+        fieldBankName.setText("");
+        fieldAccountHolderName.setText("");
+        fieldAccountNumber.setText("");
+        fieldRoutingNumber.setText("");
+        fieldBalance.setText("");
+        fieldAccountType.setText("");
+        
+        
+        
+    }//GEN-LAST:event_btnSaveActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnSave;
     private javax.swing.JTextField fieldAccountHolderName;
     private javax.swing.JTextField fieldAccountNumber;
     private javax.swing.JTextField fieldAccountType;
@@ -143,4 +239,5 @@ public class CreateBankAccountJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblCreateBankAccount;
     private javax.swing.JLabel lblRoutingNumber;
     // End of variables declaration//GEN-END:variables
-}
+
+

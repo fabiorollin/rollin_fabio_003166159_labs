@@ -72,16 +72,46 @@ public class MainJFrame extends javax.swing.JFrame {
         });
 
         btnCreateHomeAddress.setText("Create Home Address");
+        btnCreateHomeAddress.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateHomeAddressActionPerformed(evt);
+            }
+        });
 
         btnViewHomeAddress.setText("View Home Address");
+        btnViewHomeAddress.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewHomeAddressActionPerformed(evt);
+            }
+        });
 
         btnCreateLocalAddress.setText("Create Local Address");
+        btnCreateLocalAddress.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateLocalAddressActionPerformed(evt);
+            }
+        });
 
         btnViewLocalAddress.setText("View Local Address");
+        btnViewLocalAddress.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewLocalAddressActionPerformed(evt);
+            }
+        });
 
         btnCreateBankAccount.setText("Create Bank Account");
+        btnCreateBankAccount.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateBankAccountActionPerformed(evt);
+            }
+        });
 
         btnViewBankAccount.setText("View Bank Account");
+        btnViewBankAccount.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewBankAccountActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("Person Profile");
@@ -175,6 +205,57 @@ public class MainJFrame extends javax.swing.JFrame {
         
 
     }//GEN-LAST:event_btnViewPersonActionPerformed
+
+    private void btnCreateHomeAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateHomeAddressActionPerformed
+        // TODO add your handling code here:
+        //Step1: Instantiate the ViewJPanel
+        CreateHomeAddressJPanel CreateHomeAddressJPanel = new CreateHomeAddressJPanel(homeAddress);
+        //Step2: Switch
+        splitPane.setRightComponent(CreateHomeAddressJPanel);
+        
+    }//GEN-LAST:event_btnCreateHomeAddressActionPerformed
+
+    private void btnViewHomeAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewHomeAddressActionPerformed
+        // TODO add your handling code here:
+        //Step1: Instantiate the ViewJPanel
+        ViewHomeAddressJPanel ViewHomeAddressJPanel = new ViewHomeAddressJPanel(homeAddress);
+        //Step2: Switch
+        splitPane.setRightComponent(ViewHomeAddressJPanel);
+    }//GEN-LAST:event_btnViewHomeAddressActionPerformed
+
+    private void btnCreateLocalAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateLocalAddressActionPerformed
+        // TODO add your handling code here:
+        //Step1: Instantiate the ViewJPanel
+        CreateLocalAddressJPanel createLocalAddressJPanel = new CreateLocalAddressJPanel(localAddress);
+        //Step2: Switch
+        splitPane.setRightComponent(createLocalAddressJPanel);
+    }//GEN-LAST:event_btnCreateLocalAddressActionPerformed
+
+    private void btnViewLocalAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewLocalAddressActionPerformed
+        // TODO add your handling code here:
+        //Step1: Instantiate the ViewJPanel
+        ViewLocalAddresssJPanel viewLocalAddressJPanel = new ViewLocalAddresssJPanel(localAddress);
+        //Step2: Switch
+        splitPane.setRightComponent(viewLocalAddressJPanel);
+        
+    }//GEN-LAST:event_btnViewLocalAddressActionPerformed
+
+    private void btnCreateBankAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateBankAccountActionPerformed
+        // TODO add your handling code here:
+        //Step1: Instantiate the ViewJPanel
+        CreateBankAccountJPanel createBankAccountJPanel = new CreateBankAccountJPanel(bank);
+        //Step2: Switch
+        splitPane.setRightComponent(createBankAccountJPanel);
+    }//GEN-LAST:event_btnCreateBankAccountActionPerformed
+
+    private void btnViewBankAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewBankAccountActionPerformed
+        // TODO add your handling code here:
+        //Step1: Instantiate the ViewJPanel
+        ViewBankAccountJPanel viewBankAccountJPanel = new ViewBankAccountJPanel(bank);
+        //Step2: Switch
+        splitPane.setRightComponent(viewBankAccountJPanel);
+        
+    }//GEN-LAST:event_btnViewBankAccountActionPerformed
 
     /**
      * @param args the command line arguments

@@ -32,17 +32,25 @@
               </Group>
               <EmptySpace pref="151" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                  <Component id="fieldBalance" alignment="0" max="32767" attributes="0"/>
-                  <Component id="fieldRoutingNumber" alignment="0" max="32767" attributes="0"/>
-                  <Component id="fieldAccountNumber" alignment="0" max="32767" attributes="0"/>
-                  <Component id="fieldBankName" alignment="0" max="32767" attributes="0"/>
-                  <Component id="fieldAccountHolderName" alignment="0" min="-2" pref="137" max="-2" attributes="0"/>
+                  <Component id="fieldZipCode" alignment="0" max="32767" attributes="0"/>
+                  <Component id="fieldState" alignment="0" max="32767" attributes="0"/>
+                  <Component id="fieldCity" alignment="0" max="32767" attributes="0"/>
+                  <Component id="fieldStreet" alignment="0" max="32767" attributes="0"/>
+                  <Component id="fieldUnitNum" alignment="0" min="-2" pref="137" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
           </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
-              <Component id="lblCreateBankAccount" min="-2" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
+                      <Component id="lblCreateBankAccount" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="142" max="-2" attributes="0"/>
+                      <Component id="lblSave" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -55,46 +63,48 @@
               <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblStreet" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="fieldBankName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="fieldStreet" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblUnitNumber" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="fieldAccountHolderName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="fieldUnitNum" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblCity" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="fieldAccountNumber" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="fieldCity" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblState" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="fieldRoutingNumber" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="fieldState" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblZipCode" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="fieldBalance" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="fieldZipCode" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="200" max="32767" attributes="0"/>
+              <EmptySpace pref="44" max="32767" attributes="0"/>
+              <Component id="lblSave" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="133" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JTextField" name="fieldBankName">
+    <Component class="javax.swing.JTextField" name="fieldStreet">
     </Component>
-    <Component class="javax.swing.JTextField" name="fieldAccountHolderName">
+    <Component class="javax.swing.JTextField" name="fieldUnitNum">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldAccountHolderNameActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldUnitNumActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="fieldAccountNumber">
+    <Component class="javax.swing.JTextField" name="fieldCity">
     </Component>
-    <Component class="javax.swing.JTextField" name="fieldRoutingNumber">
+    <Component class="javax.swing.JTextField" name="fieldState">
     </Component>
-    <Component class="javax.swing.JTextField" name="fieldBalance">
+    <Component class="javax.swing.JTextField" name="fieldZipCode">
     </Component>
     <Component class="javax.swing.JLabel" name="lblCreateBankAccount">
       <Properties>
@@ -128,6 +138,14 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Zip Code"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="lblSave">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Save"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lblSaveActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
