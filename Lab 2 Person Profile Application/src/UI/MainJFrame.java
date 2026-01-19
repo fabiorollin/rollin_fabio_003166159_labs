@@ -4,6 +4,10 @@
  */
 package UI;
 
+import Model.Address;
+import Model.Bank;
+import Model.Person;
+
 /**
  *
  * @author fabio
@@ -13,8 +17,18 @@ public class MainJFrame extends javax.swing.JFrame {
     /**
      * Creates new form MainJFrame
      */
+    Person person;
+    Bank bank;
+    Address homeAddress;
+    Address localAddress;
+    
+    
     public MainJFrame() {
         initComponents();
+        person = new Person();
+        bank = new Bank();
+        homeAddress = new Address();
+        localAddress = new Address();
     }
 
     /**
@@ -44,8 +58,18 @@ public class MainJFrame extends javax.swing.JFrame {
         controlPanel.setBackground(new java.awt.Color(255, 153, 153));
 
         btnCreatePerson.setText("Create Person");
+        btnCreatePerson.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreatePersonActionPerformed(evt);
+            }
+        });
 
         btnViewPerson.setText("View Person");
+        btnViewPerson.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewPersonActionPerformed(evt);
+            }
+        });
 
         btnCreateHomeAddress.setText("Create Home Address");
 
@@ -107,7 +131,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(btnCreateBankAccount)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnViewBankAccount)
-                .addContainerGap(106, Short.MAX_VALUE))
+                .addContainerGap(224, Short.MAX_VALUE))
         );
 
         splitPane.setLeftComponent(controlPanel);
@@ -118,11 +142,11 @@ public class MainJFrame extends javax.swing.JFrame {
         workArea.setLayout(workAreaLayout);
         workAreaLayout.setHorizontalGroup(
             workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 535, Short.MAX_VALUE)
+            .addGap(0, 502, Short.MAX_VALUE)
         );
         workAreaLayout.setVerticalGroup(
             workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 480, Short.MAX_VALUE)
+            .addGap(0, 598, Short.MAX_VALUE)
         );
 
         splitPane.setRightComponent(workArea);
@@ -131,6 +155,26 @@ public class MainJFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCreatePersonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreatePersonActionPerformed
+        // TODO add your handling code here:
+        //Step1: Instantiate the CreateJPanel
+        CreatePersonJPanel createPersonJPanel = new CreatePersonJPanel(person);
+        //Step2: Switch
+        splitPane.setRightComponent(createPersonJPanel);
+        
+        
+    }//GEN-LAST:event_btnCreatePersonActionPerformed
+
+    private void btnViewPersonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewPersonActionPerformed
+        // TODO add your handling code here:
+        //Step1: Instantiate the CreateJPanel
+        ViewPersonJPanel viewPersonJPanel = new ViewPersonJPanel(person);
+        //Step2: Switch
+        splitPane.setRightComponent(viewPersonJPanel);
+        
+
+    }//GEN-LAST:event_btnViewPersonActionPerformed
 
     /**
      * @param args the command line arguments

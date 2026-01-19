@@ -27,29 +27,29 @@ public class CreateLocalAddressJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         lblZipCode = new javax.swing.JLabel();
-        fieldAccountHolderName = new javax.swing.JTextField();
-        fieldAccountNumber = new javax.swing.JTextField();
-        fieldRoutingNumber = new javax.swing.JTextField();
-        fieldBalance = new javax.swing.JTextField();
-        lblCreateBankAccount = new javax.swing.JLabel();
+        fieldUnitNum = new javax.swing.JTextField();
+        fieldCity = new javax.swing.JTextField();
+        fieldState = new javax.swing.JTextField();
+        fieldZipCode = new javax.swing.JTextField();
+        lblCreateLocalAddress = new javax.swing.JLabel();
         lblStreet = new javax.swing.JLabel();
         lblUnitNumber = new javax.swing.JLabel();
         lblCity = new javax.swing.JLabel();
         lblState = new javax.swing.JLabel();
-        fieldBankName = new javax.swing.JTextField();
+        fieldStreet = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(255, 255, 204));
 
         lblZipCode.setText("Zip Code");
 
-        fieldAccountHolderName.addActionListener(new java.awt.event.ActionListener() {
+        fieldUnitNum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldAccountHolderNameActionPerformed(evt);
+                fieldUnitNumActionPerformed(evt);
             }
         });
 
-        lblCreateBankAccount.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblCreateBankAccount.setText("Create Local Address");
+        lblCreateLocalAddress.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblCreateLocalAddress.setText("Create Local Address");
 
         lblStreet.setText("Street");
 
@@ -73,59 +73,59 @@ public class CreateLocalAddressJPanel extends javax.swing.JPanel {
                     .addComponent(lblZipCode))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 151, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(fieldBalance, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(fieldRoutingNumber, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(fieldAccountNumber, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(fieldBankName, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(fieldAccountHolderName, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fieldZipCode, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(fieldState, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(fieldCity, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(fieldStreet, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(fieldUnitNum, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(38, 38, 38))
             .addGroup(layout.createSequentialGroup()
                 .addGap(111, 111, 111)
-                .addComponent(lblCreateBankAccount)
+                .addComponent(lblCreateLocalAddress)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(67, 67, 67)
-                .addComponent(lblCreateBankAccount)
+                .addComponent(lblCreateLocalAddress)
                 .addGap(54, 54, 54)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblStreet)
-                    .addComponent(fieldBankName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fieldStreet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblUnitNumber)
-                    .addComponent(fieldAccountHolderName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fieldUnitNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblCity)
-                    .addComponent(fieldAccountNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fieldCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblState)
-                    .addComponent(fieldRoutingNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fieldState, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblZipCode)
-                    .addComponent(fieldBalance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fieldZipCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(200, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void fieldAccountHolderNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldAccountHolderNameActionPerformed
+    private void fieldUnitNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldUnitNumActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldAccountHolderNameActionPerformed
+    }//GEN-LAST:event_fieldUnitNumActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField fieldAccountHolderName;
-    private javax.swing.JTextField fieldAccountNumber;
-    private javax.swing.JTextField fieldBalance;
-    private javax.swing.JTextField fieldBankName;
-    private javax.swing.JTextField fieldRoutingNumber;
+    private javax.swing.JTextField fieldCity;
+    private javax.swing.JTextField fieldState;
+    private javax.swing.JTextField fieldStreet;
+    private javax.swing.JTextField fieldUnitNum;
+    private javax.swing.JTextField fieldZipCode;
     private javax.swing.JLabel lblCity;
-    private javax.swing.JLabel lblCreateBankAccount;
+    private javax.swing.JLabel lblCreateLocalAddress;
     private javax.swing.JLabel lblState;
     private javax.swing.JLabel lblStreet;
     private javax.swing.JLabel lblUnitNumber;

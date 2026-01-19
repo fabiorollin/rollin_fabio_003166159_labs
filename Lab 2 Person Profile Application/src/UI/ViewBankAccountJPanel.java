@@ -26,19 +26,121 @@ public class ViewBankAccountJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lblAccountType = new javax.swing.JLabel();
+        fieldBankName = new javax.swing.JTextField();
+        fieldAccountHolderName = new javax.swing.JTextField();
+        fieldAccountNumber = new javax.swing.JTextField();
+        fieldRoutingNumber = new javax.swing.JTextField();
+        fieldBalance = new javax.swing.JTextField();
+        fieldAccountType = new javax.swing.JTextField();
+        lblViewBankAccount = new javax.swing.JLabel();
+        lblBankName = new javax.swing.JLabel();
+        lblAccountHolderName = new javax.swing.JLabel();
+        lblAccountNumber = new javax.swing.JLabel();
+        lblRoutingNumber = new javax.swing.JLabel();
+        lblBalance = new javax.swing.JLabel();
+
+        setBackground(new java.awt.Color(255, 255, 204));
+
+        lblAccountType.setText("Account Type");
+
+        fieldAccountHolderName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldAccountHolderNameActionPerformed(evt);
+            }
+        });
+
+        lblViewBankAccount.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblViewBankAccount.setText("View Bank Account");
+
+        lblBankName.setText("Bank Name");
+
+        lblAccountHolderName.setText("Account Holder Name");
+
+        lblAccountNumber.setText("Account Number");
+
+        lblRoutingNumber.setText("Routing Number");
+
+        lblBalance.setText("Balance");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblAccountHolderName)
+                    .addComponent(lblBankName)
+                    .addComponent(lblAccountNumber)
+                    .addComponent(lblRoutingNumber)
+                    .addComponent(lblBalance)
+                    .addComponent(lblAccountType))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(fieldAccountType)
+                    .addComponent(fieldBalance, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(fieldRoutingNumber, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(fieldAccountNumber, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(fieldBankName, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(fieldAccountHolderName, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(38, 38, 38))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(111, 111, 111)
+                .addComponent(lblViewBankAccount)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(67, 67, 67)
+                .addComponent(lblViewBankAccount)
+                .addGap(54, 54, 54)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblBankName)
+                    .addComponent(fieldBankName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblAccountHolderName)
+                    .addComponent(fieldAccountHolderName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblAccountNumber)
+                    .addComponent(fieldAccountNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblRoutingNumber)
+                    .addComponent(fieldRoutingNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblBalance)
+                    .addComponent(fieldBalance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblAccountType)
+                    .addComponent(fieldAccountType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void fieldAccountHolderNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldAccountHolderNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldAccountHolderNameActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField fieldAccountHolderName;
+    private javax.swing.JTextField fieldAccountNumber;
+    private javax.swing.JTextField fieldAccountType;
+    private javax.swing.JTextField fieldBalance;
+    private javax.swing.JTextField fieldBankName;
+    private javax.swing.JTextField fieldRoutingNumber;
+    private javax.swing.JLabel lblAccountHolderName;
+    private javax.swing.JLabel lblAccountNumber;
+    private javax.swing.JLabel lblAccountType;
+    private javax.swing.JLabel lblBalance;
+    private javax.swing.JLabel lblBankName;
+    private javax.swing.JLabel lblRoutingNumber;
+    private javax.swing.JLabel lblViewBankAccount;
     // End of variables declaration//GEN-END:variables
 }

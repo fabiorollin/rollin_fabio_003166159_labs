@@ -22,6 +22,7 @@ public class Person {
         
     homeAddress =new Address();
     localAddress = new Address();
+    bankAccount = new Bank();
         
     }
 
