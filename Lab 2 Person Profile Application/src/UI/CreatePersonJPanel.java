@@ -304,7 +304,7 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
 
 
         // 5) Save into Person object
-        // (Assuming you have a Person variable in this panel like: private Person person;)
+        
         
         person.setFirstName(firstName);
         person.setLastName(lastName);
@@ -312,7 +312,7 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
         person.setMarried(married);
     
         // 6) Save home/local addresses
-        Address homeAddress = person.getHomeAddress();   // since you init them in Person()
+        Address homeAddress = person.getHomeAddress();   
         homeAddress.setStreetName(homeStreet);
         homeAddress.setUnitNum(homeUnit);
         homeAddress.setCity(homeCity);

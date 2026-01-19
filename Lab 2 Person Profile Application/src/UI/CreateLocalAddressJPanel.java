@@ -153,7 +153,7 @@ public class CreateLocalAddressJPanel extends javax.swing.JPanel {
         String state  = fieldState.getText().trim();
         String zip    = fieldZipCode.getText().trim();
 
-        // 1) Null/empty checks (required)
+        // 1) Null/empty checks
         if (street.isEmpty()) {
         JOptionPane.showMessageDialog(this, "Street Name is required.");
         return;
@@ -171,8 +171,8 @@ public class CreateLocalAddressJPanel extends javax.swing.JPanel {
         return;
         }
 
-        // 2) Data type validation example: Zip must be numeric (simple)
-        // (If your rubric expects int/double validation somewhere, this helps.)
+        // 2) Data type validation 
+        
         try {
         Integer.parseInt(zip);
         } catch (NumberFormatException e) {

@@ -188,7 +188,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void btnCreatePersonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreatePersonActionPerformed
         // TODO add your handling code here:
-        //Step1: Instantiate the CreateJPanel
+        //Step1: Instantiate the CreatePersonJPanel
         CreatePersonJPanel createPersonJPanel = new CreatePersonJPanel(person);
         //Step2: Switch
         splitPane.setRightComponent(createPersonJPanel);
@@ -198,7 +198,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void btnViewPersonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewPersonActionPerformed
         // TODO add your handling code here:
-        //Step1: Instantiate the ViewJPanel
+        //Step1: Instantiate the ViewPersonJPanel
         ViewPersonJPanel viewPersonJPanel = new ViewPersonJPanel(person);
         //Step2: Switch
         splitPane.setRightComponent(viewPersonJPanel);
@@ -208,7 +208,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void btnCreateHomeAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateHomeAddressActionPerformed
         // TODO add your handling code here:
-        //Step1: Instantiate the ViewJPanel
+        //Step1: Instantiate the CreateHomeAddressJPanel
         CreateHomeAddressJPanel CreateHomeAddressJPanel = new CreateHomeAddressJPanel(homeAddress);
         //Step2: Switch
         splitPane.setRightComponent(CreateHomeAddressJPanel);
@@ -217,7 +217,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void btnViewHomeAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewHomeAddressActionPerformed
         // TODO add your handling code here:
-        //Step1: Instantiate the ViewJPanel
+        //Step1: Instantiate the ViewHomeAddressJPanel
         ViewHomeAddressJPanel ViewHomeAddressJPanel = new ViewHomeAddressJPanel(homeAddress);
         //Step2: Switch
         splitPane.setRightComponent(ViewHomeAddressJPanel);
@@ -225,7 +225,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void btnCreateLocalAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateLocalAddressActionPerformed
         // TODO add your handling code here:
-        //Step1: Instantiate the ViewJPanel
+        //Step1: Instantiate the CreateLocalAddressJPanel
         CreateLocalAddressJPanel createLocalAddressJPanel = new CreateLocalAddressJPanel(localAddress);
         //Step2: Switch
         splitPane.setRightComponent(createLocalAddressJPanel);
@@ -233,7 +233,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void btnViewLocalAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewLocalAddressActionPerformed
         // TODO add your handling code here:
-        //Step1: Instantiate the ViewJPanel
+        //Step1: Instantiate the ViewLocalAddressJPanel
         ViewLocalAddresssJPanel viewLocalAddressJPanel = new ViewLocalAddresssJPanel(localAddress);
         //Step2: Switch
         splitPane.setRightComponent(viewLocalAddressJPanel);
@@ -242,7 +242,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void btnCreateBankAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateBankAccountActionPerformed
         // TODO add your handling code here:
-        //Step1: Instantiate the ViewJPanel
+        //Step1: Instantiate the CreateBankAccountJPanel
         CreateBankAccountJPanel createBankAccountJPanel = new CreateBankAccountJPanel(bank);
         //Step2: Switch
         splitPane.setRightComponent(createBankAccountJPanel);
@@ -250,7 +250,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void btnViewBankAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewBankAccountActionPerformed
         // TODO add your handling code here:
-        //Step1: Instantiate the ViewJPanel
+        //Step1: Instantiate the ViewBankAccountJPanel
         ViewBankAccountJPanel viewBankAccountJPanel = new ViewBankAccountJPanel(bank);
         //Step2: Switch
         splitPane.setRightComponent(viewBankAccountJPanel);

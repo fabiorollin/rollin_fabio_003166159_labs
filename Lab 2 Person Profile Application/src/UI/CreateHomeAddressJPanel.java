@@ -165,7 +165,7 @@ public class CreateHomeAddressJPanel extends javax.swing.JPanel {
         return;
         }
 
-        // 2) Data type validation (Zip numeric)
+        // 2) Data type validation
         try {
         Integer.parseInt(zip);
         } catch (NumberFormatException e) {
