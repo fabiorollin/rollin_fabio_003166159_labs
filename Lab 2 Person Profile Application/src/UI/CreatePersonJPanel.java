@@ -311,7 +311,7 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
         person.setAge(age);
         person.setMarried(married);
     
-        // 6) Save home/local addresses (ONE Address class, two objects)
+        // 6) Save home/local addresses
         Address homeAddress = person.getHomeAddress();   // since you init them in Person()
         homeAddress.setStreetName(homeStreet);
         homeAddress.setUnitNum(homeUnit);
@@ -328,6 +328,28 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
 
         
         JOptionPane.showMessageDialog(this, "Person profile saved successfully.");
+        
+        // Clear all text fields
+        fieldFirstName.setText("");
+        fieldLastName.setText("");
+        fieldAge.setText("");
+        checkMarried.setSelected(false);
+
+        // Home address
+        fieldStreetNameHomeAddress.setText("");
+        fieldUnitNumHomeAddress.setText("");
+        fieldCityHomeAddress.setText("");
+        fieldStateHomeAddress.setText("");
+        fieldZipCodeHomeAddress.setText("");
+
+        // Local address
+        fieldStreetNameLocalAddress.setText("");
+        fieldUnitNumLocalAddress.setText("");
+        fieldCityLocalAddress.setText("");
+        fieldStateLocalAddress.setText("");
+        fieldZipCodeLocalAddress.setText("");
+        
+        
     }//GEN-LAST:event_btnSaveActionPerformed
 
 

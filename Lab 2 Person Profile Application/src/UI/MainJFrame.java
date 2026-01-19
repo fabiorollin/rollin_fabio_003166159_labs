@@ -168,7 +168,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void btnViewPersonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewPersonActionPerformed
         // TODO add your handling code here:
-        //Step1: Instantiate the CreateJPanel
+        //Step1: Instantiate the ViewJPanel
         ViewPersonJPanel viewPersonJPanel = new ViewPersonJPanel(person);
         //Step2: Switch
         splitPane.setRightComponent(viewPersonJPanel);

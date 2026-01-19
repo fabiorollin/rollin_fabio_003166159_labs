@@ -26,240 +26,197 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lblLastName" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="lblFirstName" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblLastName" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="lblAge" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="lblMarried" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="fieldMarried" alignment="0" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="checkMarried" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="fieldLastName" alignment="1" max="32767" attributes="0"/>
                           <Component id="fieldAge" alignment="0" max="32767" attributes="0"/>
-                          <Component id="fieldFirstName" alignment="0" max="32767" attributes="0"/>
-                          <Component id="fieldLastName" alignment="0" min="-2" pref="137" max="-2" attributes="0"/>
+                          <Component id="fieldFirstName" alignment="0" pref="137" max="32767" attributes="0"/>
                       </Group>
+                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="lblStreetNameHomeAddress" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="lblHomeAddress" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="fieldStreetNameHomeAddress" alignment="0" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="lblZipCodeHomeAddress" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="fieldZipCodeHomeAddress" min="-2" pref="136" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="lblCityHomeAddress" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="lblUnitNumHomeAddress" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="lblStreetNameHomeAddress" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                      <Component id="fieldStreetNameHomeAddress" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="fieldCityHomeAddress" alignment="0" min="-2" pref="137" max="-2" attributes="0"/>
-                                          <Component id="fieldUnitNumHomeAddress" alignment="0" min="-2" pref="137" max="-2" attributes="0"/>
+                                          <Component id="lblZipCode1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblUnitNumHomeAddress" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblCity" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblState" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="fieldZipCodeHomeAddress" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="fieldStateHomeAddress" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="fieldCityHomeAddress" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="fieldUnitNumHomeAddress" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="lblStateHomeAddress" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                              <Component id="fieldStateHomeAddress" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
+                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace pref="66" max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="lblZipCodeLocalAddress" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                              <Component id="fieldZipCodeLocalAddress" min="-2" pref="137" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="lblLocalAddress" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lblZipCode2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblUnitNumLocalAddress" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblCityLocalAddress" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblStateLocalAddress" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblStreetNameLocalAddress" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="fieldStreetNameLocalAddress" alignment="0" pref="137" max="32767" attributes="0"/>
+                                  <Component id="fieldZipCodeLocalAddress" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="fieldStateLocalAddress" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="fieldUnitNumLocalAddress" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="fieldCityLocalAddress" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="lblStreetNameLocalAddress" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="fieldStreetNameLocalAddress" min="-2" pref="137" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="lblUnitNumLocalAddress" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="fieldUnitNumLocalAddress" min="-2" pref="137" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="lblCityLocalAddress" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="fieldCityLocalAddress" min="-2" pref="137" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="lblStateLocalAddress" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="fieldStateLocalAddress" min="-2" pref="137" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
           </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="lblViewPerson" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="191" max="-2" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="192" max="-2" attributes="0"/>
+              <Component id="lblCreatePerson" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="237" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-              <Component id="lblViewPerson" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblFirstName" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="fieldFirstName" alignment="3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+              <Component id="lblCreatePerson" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="lblFirstName" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="fieldFirstName" alignment="1" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblLastName" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="fieldLastName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblLastName" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblAge" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="fieldAge" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblAge" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="checkMarried" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="lblMarried" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="fieldMarried" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblHomeAddress" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblLocalAddress" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lblStreetNameHomeAddress" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="fieldStreetNameHomeAddress" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="lblStreetNameHomeAddress" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lblUnitNumHomeAddress" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="fieldUnitNumHomeAddress" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblUnitNumHomeAddress" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblUnitNumLocalAddress" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lblCityHomeAddress" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="fieldCityHomeAddress" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblCity" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblCityLocalAddress" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lblStateHomeAddress" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="fieldStateHomeAddress" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblState" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblStateLocalAddress" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lblZipCodeHomeAddress" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblZipCode1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="fieldZipCodeHomeAddress" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblZipCode2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="fieldStreetNameHomeAddress" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="lblStreetNameLocalAddress" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="fieldStreetNameLocalAddress" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lblUnitNumLocalAddress" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="fieldUnitNumLocalAddress" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="fieldUnitNumLocalAddress" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lblCityLocalAddress" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="fieldCityLocalAddress" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="fieldCityLocalAddress" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lblStateLocalAddress" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="fieldStateLocalAddress" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="fieldStateLocalAddress" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lblZipCodeLocalAddress" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="fieldZipCodeLocalAddress" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="fieldZipCodeLocalAddress" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="lblStreetNameLocalAddress">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Street Name"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblUnitNumLocalAddress">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Unit Number"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="fieldLastName">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldLastNameActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblCityLocalAddress">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="City"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="fieldAge">
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblStateLocalAddress">
+    <Component class="javax.swing.JLabel" name="lblState">
       <Properties>
         <Property name="text" type="java.lang.String" value="State"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="fieldMarried">
+    <Component class="javax.swing.JTextField" name="fieldStreetNameHomeAddress">
     </Component>
-    <Component class="javax.swing.JTextField" name="fieldStreetNameLocalAddress">
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblHomeAddress">
+    <Component class="javax.swing.JLabel" name="lblZipCode2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Home Address"/>
+        <Property name="text" type="java.lang.String" value="Zip Code"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblViewPerson">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Segoe UI" size="18" style="1"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="View Person"/>
-      </Properties>
+    <Component class="javax.swing.JTextField" name="fieldUnitNumLocalAddress">
+    </Component>
+    <Component class="javax.swing.JTextField" name="fieldCityLocalAddress">
+    </Component>
+    <Component class="javax.swing.JTextField" name="fieldStateLocalAddress">
+    </Component>
+    <Component class="javax.swing.JTextField" name="fieldZipCodeLocalAddress">
     </Component>
     <Component class="javax.swing.JLabel" name="lblFirstName">
       <Properties>
         <Property name="text" type="java.lang.String" value="First Name"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblZipCodeHomeAddress">
+    <Component class="javax.swing.JLabel" name="lblStreetNameLocalAddress">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Zip Code"/>
+        <Property name="text" type="java.lang.String" value="Street Name"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblLastName">
@@ -267,12 +224,62 @@
         <Property name="text" type="java.lang.String" value="Last Name"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="fieldUnitNumHomeAddress">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldUnitNumHomeAddressActionPerformed"/>
-      </Events>
+    <Component class="javax.swing.JLabel" name="lblUnitNumLocalAddress">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Unit Number"/>
+      </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblLocalAddress">
+    <Component class="javax.swing.JLabel" name="lblCityLocalAddress">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="City"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="checkMarried">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Yes"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblAge">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Age"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblStateLocalAddress">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="State"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="fieldLastName">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblMarried">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Married"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="fieldStreetNameLocalAddress">
+    </Component>
+    <Component class="javax.swing.JTextField" name="fieldAge">
+    </Component>
+    <Component class="javax.swing.JTextField" name="fieldFirstName">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Home Address"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblCreatePerson">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="View Person"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblZipCode1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Zip Code"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="fieldUnitNumHomeAddress">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="text" type="java.lang.String" value="Local Address"/>
       </Properties>
@@ -282,18 +289,6 @@
     <Component class="javax.swing.JTextField" name="fieldStateHomeAddress">
     </Component>
     <Component class="javax.swing.JTextField" name="fieldZipCodeHomeAddress">
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblAge">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Age"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblMarried">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Married"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="fieldFirstName">
     </Component>
     <Component class="javax.swing.JLabel" name="lblStreetNameHomeAddress">
       <Properties>
@@ -305,33 +300,10 @@
         <Property name="text" type="java.lang.String" value="Unit Number"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblCityHomeAddress">
+    <Component class="javax.swing.JLabel" name="lblCity">
       <Properties>
         <Property name="text" type="java.lang.String" value="City"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblStateHomeAddress">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="State"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="fieldStreetNameHomeAddress">
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblZipCodeLocalAddress">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Zip Code"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="fieldUnitNumLocalAddress">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldUnitNumLocalAddressActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JTextField" name="fieldCityLocalAddress">
-    </Component>
-    <Component class="javax.swing.JTextField" name="fieldStateLocalAddress">
-    </Component>
-    <Component class="javax.swing.JTextField" name="fieldZipCodeLocalAddress">
     </Component>
   </SubComponents>
 </Form>
