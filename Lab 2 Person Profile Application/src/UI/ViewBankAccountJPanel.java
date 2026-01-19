@@ -16,9 +16,19 @@ public class ViewBankAccountJPanel extends javax.swing.JPanel {
      * Creates new form ViewBankAccountJPanel
      */
     Bank bankAccount;
-    public ViewBankAccountJPanel(Bank bankAccount) {
+    
+    public ViewBankAccountJPanel(Bank b) {
         initComponents();
-        this.bankAccount = bankAccount;
+        bankAccount = b;
+        display();
+    }
+    private void display() {
+        fieldBankName.setText(bankAccount.getBankName());
+        fieldAccountHolderName.setText(bankAccount.getAccountHolderName());
+        fieldAccountNumber.setText(bankAccount.getAccountNumber());
+        fieldRoutingNumber.setText(bankAccount.getRoutingNumber());
+        fieldBalance.setText(String.valueOf(bankAccount.getBalance()));
+        fieldAccountType.setText(bankAccount.getAccountType());
     }
 
     /**

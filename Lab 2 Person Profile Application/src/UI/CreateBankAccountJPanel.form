@@ -27,9 +27,9 @@
                   <Component id="lblAccountHolderName" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="lblBankName" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="lblAccountNumber" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblRoutingNumber" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="lblBalance" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="lblAccountType" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblRoutingNumber" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="101" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="1" max="-2" attributes="0">
@@ -79,8 +79,8 @@
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblRoutingNumber" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="fieldRoutingNumber" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblRoutingNumber" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -123,8 +123,6 @@
         <Property name="text" type="java.lang.String" value="Account Number"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblRoutingNumber">
-    </Component>
     <Component class="javax.swing.JLabel" name="lblBalance">
       <Properties>
         <Property name="text" type="java.lang.String" value="Balance"/>
@@ -157,6 +155,11 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSaveActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblRoutingNumber">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Routing Number"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

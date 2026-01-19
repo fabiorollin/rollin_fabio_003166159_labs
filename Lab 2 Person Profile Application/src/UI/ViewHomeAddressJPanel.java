@@ -16,10 +16,24 @@ public class ViewHomeAddressJPanel extends javax.swing.JPanel {
      * Creates new form ViewHomeAddressJPanel
      */
     Address homeAddress;
-    public ViewHomeAddressJPanel(Address homeAddress) {
+    public ViewHomeAddressJPanel(Address a) {
         initComponents();
-        this.homeAddress = homeAddress;
+        homeAddress = a;
+        display();
     }
+    
+    private void display() {
+
+    if (homeAddress == null) {
+        return;
+    }
+
+    fieldStreet.setText(homeAddress.getStreetName());
+    fieldUniNum.setText(homeAddress.getUnitNum());
+    fieldCity.setText(homeAddress.getCity());
+    fieldState.setText(homeAddress.getState());
+    fieldZipCode.setText(homeAddress.getZipCode());
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -31,24 +45,24 @@ public class ViewHomeAddressJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         lblZipCode = new javax.swing.JLabel();
-        fieldAccountHolderName = new javax.swing.JTextField();
-        fieldAccountNumber = new javax.swing.JTextField();
-        fieldRoutingNumber = new javax.swing.JTextField();
-        fieldBalance = new javax.swing.JTextField();
+        fieldUniNum = new javax.swing.JTextField();
+        fieldCity = new javax.swing.JTextField();
+        fieldState = new javax.swing.JTextField();
+        fieldZipCode = new javax.swing.JTextField();
         lblViewHomeAddress = new javax.swing.JLabel();
         lblStreet = new javax.swing.JLabel();
         lblUnitNumber = new javax.swing.JLabel();
         lblCity = new javax.swing.JLabel();
         lblState = new javax.swing.JLabel();
-        fieldBankName = new javax.swing.JTextField();
+        fieldStreet = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(255, 255, 204));
 
         lblZipCode.setText("Zip Code");
 
-        fieldAccountHolderName.addActionListener(new java.awt.event.ActionListener() {
+        fieldUniNum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldAccountHolderNameActionPerformed(evt);
+                fieldUniNumActionPerformed(evt);
             }
         });
 
@@ -77,11 +91,11 @@ public class ViewHomeAddressJPanel extends javax.swing.JPanel {
                     .addComponent(lblZipCode))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 151, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(fieldBalance, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(fieldRoutingNumber, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(fieldAccountNumber, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(fieldBankName, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(fieldAccountHolderName, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fieldZipCode, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(fieldState, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(fieldCity, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(fieldStreet, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(fieldUniNum, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(38, 38, 38))
             .addGroup(layout.createSequentialGroup()
                 .addGap(111, 111, 111)
@@ -96,38 +110,38 @@ public class ViewHomeAddressJPanel extends javax.swing.JPanel {
                 .addGap(54, 54, 54)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblStreet)
-                    .addComponent(fieldBankName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fieldStreet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblUnitNumber)
-                    .addComponent(fieldAccountHolderName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fieldUniNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblCity)
-                    .addComponent(fieldAccountNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fieldCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblState)
-                    .addComponent(fieldRoutingNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fieldState, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblZipCode)
-                    .addComponent(fieldBalance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fieldZipCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(200, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void fieldAccountHolderNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldAccountHolderNameActionPerformed
+    private void fieldUniNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldUniNumActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldAccountHolderNameActionPerformed
+    }//GEN-LAST:event_fieldUniNumActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField fieldAccountHolderName;
-    private javax.swing.JTextField fieldAccountNumber;
-    private javax.swing.JTextField fieldBalance;
-    private javax.swing.JTextField fieldBankName;
-    private javax.swing.JTextField fieldRoutingNumber;
+    private javax.swing.JTextField fieldCity;
+    private javax.swing.JTextField fieldState;
+    private javax.swing.JTextField fieldStreet;
+    private javax.swing.JTextField fieldUniNum;
+    private javax.swing.JTextField fieldZipCode;
     private javax.swing.JLabel lblCity;
     private javax.swing.JLabel lblState;
     private javax.swing.JLabel lblStreet;

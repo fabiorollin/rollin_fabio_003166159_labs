@@ -37,7 +37,6 @@ public class CreateBankAccountJPanel extends javax.swing.JPanel {
         lblBankName = new javax.swing.JLabel();
         lblAccountHolderName = new javax.swing.JLabel();
         lblAccountNumber = new javax.swing.JLabel();
-        lblRoutingNumber = new javax.swing.JLabel();
         lblBalance = new javax.swing.JLabel();
         lblAccountType = new javax.swing.JLabel();
         fieldBankName = new javax.swing.JTextField();
@@ -47,6 +46,7 @@ public class CreateBankAccountJPanel extends javax.swing.JPanel {
         fieldBalance = new javax.swing.JTextField();
         fieldAccountType = new javax.swing.JTextField();
         btnSave = new javax.swing.JButton();
+        lblRoutingNumber = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 204));
 
@@ -76,6 +76,8 @@ public class CreateBankAccountJPanel extends javax.swing.JPanel {
             }
         });
 
+        lblRoutingNumber.setText("Routing Number");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -86,9 +88,9 @@ public class CreateBankAccountJPanel extends javax.swing.JPanel {
                     .addComponent(lblAccountHolderName)
                     .addComponent(lblBankName)
                     .addComponent(lblAccountNumber)
-                    .addComponent(lblRoutingNumber)
                     .addComponent(lblBalance)
-                    .addComponent(lblAccountType))
+                    .addComponent(lblAccountType)
+                    .addComponent(lblRoutingNumber))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(fieldAccountType)
@@ -127,8 +129,8 @@ public class CreateBankAccountJPanel extends javax.swing.JPanel {
                     .addComponent(fieldAccountNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblRoutingNumber)
-                    .addComponent(fieldRoutingNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fieldRoutingNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblRoutingNumber))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblBalance)
@@ -241,3 +243,4 @@ public class CreateBankAccountJPanel extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
 
+}

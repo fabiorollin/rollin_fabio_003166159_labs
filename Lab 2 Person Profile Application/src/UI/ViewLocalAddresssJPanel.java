@@ -17,10 +17,24 @@ public class ViewLocalAddresssJPanel extends javax.swing.JPanel {
      */
     Address localAddress;
     
-    public ViewLocalAddresssJPanel(Address localAddress) {
+    public ViewLocalAddresssJPanel(Address a) {
         initComponents();
-        this.localAddress = localAddress;
+        localAddress = a;
+        display();
     }
+    
+    private void display() {
+
+    if (localAddress == null) {
+        return;
+    }
+
+    fieldStreet.setText(localAddress.getStreetName());
+    fieldUnitNum.setText(localAddress.getUnitNum());
+    fieldCity.setText(localAddress.getCity());
+    fieldState.setText(localAddress.getState());
+    fieldZipCode.setText(localAddress.getZipCode());
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
