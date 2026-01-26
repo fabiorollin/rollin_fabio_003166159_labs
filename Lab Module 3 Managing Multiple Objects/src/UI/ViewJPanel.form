@@ -46,7 +46,7 @@
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="206" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="256" max="-2" attributes="0"/>
                       <Component id="lblViewVitalSigns" min="-2" pref="300" max="-2" attributes="0"/>
                   </Group>
               </Group>
