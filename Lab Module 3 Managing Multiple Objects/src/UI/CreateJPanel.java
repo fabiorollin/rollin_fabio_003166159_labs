@@ -6,6 +6,8 @@ package UI;
 import javax.swing.JOptionPane;
 import Model.VitalSignsHistory;
 import Model.VitalSigns;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  *
@@ -38,7 +40,7 @@ public class CreateJPanel extends javax.swing.JPanel {
         lblBloodPressure = new javax.swing.JLabel();
         lblPulse = new javax.swing.JLabel();
         llDate = new javax.swing.JLabel();
-        txtloodPressure = new javax.swing.JTextField();
+        txtBloodPressure = new javax.swing.JTextField();
         txtTemperature = new javax.swing.JTextField();
         txtPulse = new javax.swing.JTextField();
         txtDate = new javax.swing.JTextField();
@@ -61,9 +63,9 @@ public class CreateJPanel extends javax.swing.JPanel {
         llDate.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         llDate.setText("Date:");
 
-        txtloodPressure.addActionListener(new java.awt.event.ActionListener() {
+        txtBloodPressure.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtloodPressureActionPerformed(evt);
+                txtBloodPressureActionPerformed(evt);
             }
         });
 
@@ -86,6 +88,11 @@ public class CreateJPanel extends javax.swing.JPanel {
         });
 
         btnSave.setText("Save");
+        btnSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSaveActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -108,9 +115,9 @@ public class CreateJPanel extends javax.swing.JPanel {
                             .addComponent(txtTemperature, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtDate, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtPulse, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtloodPressure, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtBloodPressure, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnSave))))
-                .addContainerGap(146, Short.MAX_VALUE))
+                .addContainerGap(367, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -124,7 +131,7 @@ public class CreateJPanel extends javax.swing.JPanel {
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblBloodPressure)
-                    .addComponent(txtloodPressure, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtBloodPressure, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPulse)
@@ -135,13 +142,13 @@ public class CreateJPanel extends javax.swing.JPanel {
                     .addComponent(txtDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(43, 43, 43)
                 .addComponent(btnSave)
-                .addContainerGap(72, Short.MAX_VALUE))
+                .addContainerGap(243, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtloodPressureActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtloodPressureActionPerformed
+    private void txtBloodPressureActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBloodPressureActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtloodPressureActionPerformed
+    }//GEN-LAST:event_txtBloodPressureActionPerformed
 
     private void txtTemperatureActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTemperatureActionPerformed
         // TODO add your handling code here:
@@ -155,6 +162,32 @@ public class CreateJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDateActionPerformed
 
+    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
+        Double temperature = Double.parseDouble(txtTemperature.getText());
+        Double bloodPressure = Double.parseDouble(txtBloodPressure.getText());
+        int pulse = Integer.parseInt(txtPulse.getText());
+        String date = txtDate.getText();
+        
+        VitalSigns newVs = vitalSignsHistory.addNewVitals();
+        
+        newVs.setTemperature(temperature);
+        newVs.setBloodPressure(bloodPressure);
+        newVs.setPulse(pulse);
+        newVs.setDate(date);
+        
+        //Show the user the confirmation dialog
+        JOptionPane.showMessageDialog(this, "New Vital Signs Created", "Success" , JOptionPane.INFORMATION_MESSAGE);
+        //Cleanup the form
+        txtTemperature.setText("");
+        txtBloodPressure.setText("");
+        txtPulse.setText("");
+        txtDate.setText("");
+        
+        
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSaveActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSave;
@@ -163,9 +196,9 @@ public class CreateJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblPulse;
     private javax.swing.JLabel lblTemperature;
     private javax.swing.JLabel llDate;
+    private javax.swing.JTextField txtBloodPressure;
     private javax.swing.JTextField txtDate;
     private javax.swing.JTextField txtPulse;
     private javax.swing.JTextField txtTemperature;
-    private javax.swing.JTextField txtloodPressure;
     // End of variables declaration//GEN-END:variables
 }

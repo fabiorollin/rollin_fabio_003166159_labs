@@ -17,6 +17,7 @@ public class MainJFrame extends javax.swing.JFrame {
      * Creates new form MainJFrame
      */
     VitalSignsHistory vitalSignsHistory;
+    
     public MainJFrame() {
         initComponents();
         vitalSignsHistory = new VitalSignsHistory();
@@ -77,7 +78,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(btnCreate)
                 .addGap(18, 18, 18)
                 .addComponent(btnView)
-                .addContainerGap(246, Short.MAX_VALUE))
+                .addContainerGap(419, Short.MAX_VALUE))
         );
 
         splitPane.setLeftComponent(controlPanel);
@@ -86,11 +87,11 @@ public class MainJFrame extends javax.swing.JFrame {
         workArea.setLayout(workAreaLayout);
         workAreaLayout.setHorizontalGroup(
             workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 535, Short.MAX_VALUE)
+            .addGap(0, 749, Short.MAX_VALUE)
         );
         workAreaLayout.setVerticalGroup(
             workAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 480, Short.MAX_VALUE)
+            .addGap(0, 653, Short.MAX_VALUE)
         );
 
         splitPane.setRightComponent(workArea);
@@ -108,9 +109,11 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
         // Step 1: Instantiate the ViewJPanel
-        
+        ViewJPanel viewJPanel = new ViewJPanel(vitalSignsHistory);
         
         //Step 2 : Switch
+        splitPane.setRightComponent(viewJPanel);
+        
         
     }//GEN-LAST:event_btnViewActionPerformed
 
