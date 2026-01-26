@@ -9,5 +9,42 @@ package Model;
  * @author fabio
  */
 public class VitalSigns {
-    
+
+    String date;
+    double bloodPressure; //nmber with decimals
+    double temperature;
+    int pulse; // number without decimals
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public double getBloodPressure() {
+        return bloodPressure;
+    }
+
+    public void setBloodPressure(double bloodPressure) {
+        this.bloodPressure = bloodPressure;
+    }
+
+    public double getTemperature() {
+        return temperature;
+    }
+
+    public void setTemperature(double temperature) {
+        this.temperature = temperature;
+    }
+
+    public int getPulse() {
+        return pulse;
+    }
+
+    public void setPulse(int pulse) {
+        this.pulse = pulse;
+    }
+
 }
