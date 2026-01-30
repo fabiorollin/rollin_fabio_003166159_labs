@@ -35,11 +35,11 @@
               <EmptySpace pref="60" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="btnCreateAccount" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnRoutingNumber1" min="-2" pref="153" max="-2" attributes="0"/>
+                  <Component id="txtRoutingNumber" min="-2" pref="153" max="-2" attributes="0"/>
                   <Component id="lblCreateAccount" min="-2" max="-2" attributes="0"/>
-                  <Component id="tnAccountNumber" min="-2" pref="153" max="-2" attributes="0"/>
-                  <Component id="tnBankName" min="-2" pref="153" max="-2" attributes="0"/>
-                  <Component id="btnBalance" min="-2" pref="153" max="-2" attributes="0"/>
+                  <Component id="txtAccountNumber" min="-2" pref="153" max="-2" attributes="0"/>
+                  <Component id="txtBankName" min="-2" pref="153" max="-2" attributes="0"/>
+                  <Component id="txtBalance" min="-2" pref="153" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="193" max="-2" attributes="0"/>
           </Group>
@@ -55,22 +55,22 @@
               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblRoutingNumber" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnRoutingNumber1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtRoutingNumber" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblAccountNumber" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tnAccountNumber" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtAccountNumber" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btnBankName" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tnBankName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtBankName" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblBalance" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnBalance" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtBalance" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
               <Component id="btnCreateAccount" min="-2" max="-2" attributes="0"/>
@@ -84,6 +84,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="&lt;&lt;&lt;&lt; Back"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBackActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblCreateAccount">
       <Properties>
@@ -110,30 +113,33 @@
         <Property name="text" type="java.lang.String" value="Balance"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="tnAccountNumber">
+    <Component class="javax.swing.JTextField" name="txtAccountNumber">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tnAccountNumberActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtAccountNumberActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="btnRoutingNumber1">
+    <Component class="javax.swing.JTextField" name="txtRoutingNumber">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRoutingNumber1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtRoutingNumberActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="tnBankName">
+    <Component class="javax.swing.JTextField" name="txtBankName">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tnBankNameActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtBankNameActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="btnBalance">
+    <Component class="javax.swing.JTextField" name="txtBalance">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBalanceActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtBalanceActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnCreateAccount">
       <Properties>
         <Property name="text" type="java.lang.String" value="Create Account"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCreateAccountActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

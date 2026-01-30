@@ -4,7 +4,10 @@
  */
 package ui.AccountManager;
 
+import java.awt.CardLayout;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import model.Account;
 import model.AccountDirectory;
 
 /**
@@ -39,13 +42,18 @@ public class CreateAccountJPanel extends javax.swing.JPanel {
         lblAccountNumber = new javax.swing.JLabel();
         btnBankName = new javax.swing.JLabel();
         lblBalance = new javax.swing.JLabel();
-        tnAccountNumber = new javax.swing.JTextField();
-        btnRoutingNumber1 = new javax.swing.JTextField();
-        tnBankName = new javax.swing.JTextField();
-        btnBalance = new javax.swing.JTextField();
+        txtAccountNumber = new javax.swing.JTextField();
+        txtRoutingNumber = new javax.swing.JTextField();
+        txtBankName = new javax.swing.JTextField();
+        txtBalance = new javax.swing.JTextField();
         btnCreateAccount = new javax.swing.JButton();
 
         btnBack.setText("<<<< Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
 
         lblCreateAccount.setText("Create Account");
 
@@ -57,31 +65,36 @@ public class CreateAccountJPanel extends javax.swing.JPanel {
 
         lblBalance.setText("Balance");
 
-        tnAccountNumber.addActionListener(new java.awt.event.ActionListener() {
+        txtAccountNumber.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tnAccountNumberActionPerformed(evt);
+                txtAccountNumberActionPerformed(evt);
             }
         });
 
-        btnRoutingNumber1.addActionListener(new java.awt.event.ActionListener() {
+        txtRoutingNumber.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRoutingNumber1ActionPerformed(evt);
+                txtRoutingNumberActionPerformed(evt);
             }
         });
 
-        tnBankName.addActionListener(new java.awt.event.ActionListener() {
+        txtBankName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tnBankNameActionPerformed(evt);
+                txtBankNameActionPerformed(evt);
             }
         });
 
-        btnBalance.addActionListener(new java.awt.event.ActionListener() {
+        txtBalance.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBalanceActionPerformed(evt);
+                txtBalanceActionPerformed(evt);
             }
         });
 
         btnCreateAccount.setText("Create Account");
+        btnCreateAccount.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateAccountActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -102,11 +115,11 @@ public class CreateAccountJPanel extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnCreateAccount)
-                    .addComponent(btnRoutingNumber1, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtRoutingNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblCreateAccount)
-                    .addComponent(tnAccountNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tnBankName, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtAccountNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtBankName, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(193, 193, 193))
         );
         layout.setVerticalGroup(
@@ -119,53 +132,99 @@ public class CreateAccountJPanel extends javax.swing.JPanel {
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblRoutingNumber)
-                    .addComponent(btnRoutingNumber1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtRoutingNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblAccountNumber)
-                    .addComponent(tnAccountNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtAccountNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnBankName)
-                    .addComponent(tnBankName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtBankName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(16, 16, 16)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblBalance)
-                    .addComponent(btnBalance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtBalance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(39, 39, 39)
                 .addComponent(btnCreateAccount)
                 .addContainerGap(188, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void tnAccountNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tnAccountNumberActionPerformed
+    private void txtAccountNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAccountNumberActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tnAccountNumberActionPerformed
+    }//GEN-LAST:event_txtAccountNumberActionPerformed
 
-    private void btnRoutingNumber1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRoutingNumber1ActionPerformed
+    private void txtRoutingNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRoutingNumberActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnRoutingNumber1ActionPerformed
+    }//GEN-LAST:event_txtRoutingNumberActionPerformed
 
-    private void tnBankNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tnBankNameActionPerformed
+    private void txtBankNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBankNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tnBankNameActionPerformed
+    }//GEN-LAST:event_txtBankNameActionPerformed
 
-    private void btnBalanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBalanceActionPerformed
+    private void txtBalanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBalanceActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnBalanceActionPerformed
+    }//GEN-LAST:event_txtBalanceActionPerformed
+
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+        // TODO add your handling code here:
+        userProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+    }//GEN-LAST:event_btnBackActionPerformed
+
+    private void btnCreateAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateAccountActionPerformed
+        // TODO add your handling code here:
+        int balance;
+
+        String routingNumber = txtRoutingNumber.getText();
+        String accountNumber = txtAccountNumber.getText();
+        String bankName = txtBankName.getText();
+
+        if (routingNumber.isBlank() || bankName.isBlank() || accountNumber.isBlank())
+        {
+        JOptionPane.showMessageDialog(this, "All fields are mandatory.", "Error", JOptionPane.ERROR_MESSAGE);
+        // pause until the user closes the dialog.
+        return;
+        }
+
+        try {
+        balance = Integer.parseInt(txtBalance.getText());
+        } catch (Exception e) {
+        JOptionPane.showMessageDialog(null, "Please check the balance input.", "Warning", JOptionPane.WARNING_MESSAGE);
+        return;
+        }
+
+        Account a = accountDirectory.addAccount();
+
+        a.setRoutingNumber(routingNumber);
+        a.setAccountNumber(accountNumber);
+        a.setBankName(bankName);
+        a.setBalance(balance);
+        
+        JOptionPane.showMessageDialog(this, "Account successfully created.", "Information", JOptionPane.INFORMATION_MESSAGE);
+        txtRoutingNumber.setText("");
+        txtAccountNumber.setText("");
+        txtBankName.setText("");
+        txtBalance.setText("");
+
+
+        
+    }//GEN-LAST:event_btnCreateAccountActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
-    private javax.swing.JTextField btnBalance;
     private javax.swing.JLabel btnBankName;
     private javax.swing.JButton btnCreateAccount;
-    private javax.swing.JTextField btnRoutingNumber1;
     private javax.swing.JLabel lblAccountNumber;
     private javax.swing.JLabel lblBalance;
     private javax.swing.JLabel lblCreateAccount;
     private javax.swing.JLabel lblRoutingNumber;
-    private javax.swing.JTextField tnAccountNumber;
-    private javax.swing.JTextField tnBankName;
+    private javax.swing.JTextField txtAccountNumber;
+    private javax.swing.JTextField txtBalance;
+    private javax.swing.JTextField txtBankName;
+    private javax.swing.JTextField txtRoutingNumber;
     // End of variables declaration//GEN-END:variables
 }
