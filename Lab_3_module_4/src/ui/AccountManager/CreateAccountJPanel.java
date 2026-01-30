@@ -4,17 +4,24 @@
  */
 package ui.AccountManager;
 
+import javax.swing.JPanel;
+import model.AccountDirectory;
+
 /**
  *
  * @author fabio
  */
 public class CreateAccountJPanel extends javax.swing.JPanel {
+    JPanel userProcessContainer;
+    AccountDirectory accountDirectory;
 
     /**
      * Creates new form CreateAccountJPanel
      */
-    public CreateAccountJPanel() {
+    public CreateAccountJPanel(JPanel container, AccountDirectory directory) {
         initComponents();
+        userProcessContainer = container;
+        accountDirectory = directory;
     }
 
     /**
@@ -26,19 +33,139 @@ public class CreateAccountJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnBack = new javax.swing.JButton();
+        lblCreateAccount = new javax.swing.JLabel();
+        lblRoutingNumber = new javax.swing.JLabel();
+        lblAccountNumber = new javax.swing.JLabel();
+        btnBankName = new javax.swing.JLabel();
+        lblBalance = new javax.swing.JLabel();
+        tnAccountNumber = new javax.swing.JTextField();
+        btnRoutingNumber1 = new javax.swing.JTextField();
+        tnBankName = new javax.swing.JTextField();
+        btnBalance = new javax.swing.JTextField();
+        btnCreateAccount = new javax.swing.JButton();
+
+        btnBack.setText("<<<< Back");
+
+        lblCreateAccount.setText("Create Account");
+
+        lblRoutingNumber.setText("Routing Number");
+
+        lblAccountNumber.setText("Account Number");
+
+        btnBankName.setText("Bank Name:");
+
+        lblBalance.setText("Balance");
+
+        tnAccountNumber.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tnAccountNumberActionPerformed(evt);
+            }
+        });
+
+        btnRoutingNumber1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRoutingNumber1ActionPerformed(evt);
+            }
+        });
+
+        tnBankName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tnBankNameActionPerformed(evt);
+            }
+        });
+
+        btnBalance.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBalanceActionPerformed(evt);
+            }
+        });
+
+        btnCreateAccount.setText("Create Account");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnBack))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(144, 144, 144)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblAccountNumber)
+                            .addComponent(lblRoutingNumber)
+                            .addComponent(btnBankName)
+                            .addComponent(lblBalance))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCreateAccount)
+                    .addComponent(btnRoutingNumber1, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblCreateAccount)
+                    .addComponent(tnAccountNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tnBankName, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(193, 193, 193))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnBack)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblCreateAccount)
+                .addGap(33, 33, 33)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblRoutingNumber)
+                    .addComponent(btnRoutingNumber1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblAccountNumber)
+                    .addComponent(tnAccountNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnBankName)
+                    .addComponent(tnBankName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(16, 16, 16)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblBalance)
+                    .addComponent(btnBalance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(39, 39, 39)
+                .addComponent(btnCreateAccount)
+                .addContainerGap(188, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void tnAccountNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tnAccountNumberActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tnAccountNumberActionPerformed
+
+    private void btnRoutingNumber1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRoutingNumber1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRoutingNumber1ActionPerformed
+
+    private void tnBankNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tnBankNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tnBankNameActionPerformed
+
+    private void btnBalanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBalanceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBalanceActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBack;
+    private javax.swing.JTextField btnBalance;
+    private javax.swing.JLabel btnBankName;
+    private javax.swing.JButton btnCreateAccount;
+    private javax.swing.JTextField btnRoutingNumber1;
+    private javax.swing.JLabel lblAccountNumber;
+    private javax.swing.JLabel lblBalance;
+    private javax.swing.JLabel lblCreateAccount;
+    private javax.swing.JLabel lblRoutingNumber;
+    private javax.swing.JTextField tnAccountNumber;
+    private javax.swing.JTextField tnBankName;
     // End of variables declaration//GEN-END:variables
 }
