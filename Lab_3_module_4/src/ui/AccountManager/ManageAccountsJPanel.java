@@ -5,7 +5,10 @@
 package ui.AccountManager;
 
 import java.awt.CardLayout;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
+import model.Account;
 import model.AccountDirectory;
 
 /**
@@ -24,7 +27,7 @@ public class ManageAccountsJPanel extends javax.swing.JPanel {
         userProcessContainer = container;
         accountDirectory = directory;
         
-        populateTale();
+        populateTable();
     }
 
     /**
@@ -83,8 +86,18 @@ public class ManageAccountsJPanel extends javax.swing.JPanel {
         });
 
         btnViewDeatails.setText("View Details");
+        btnViewDeatails.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewDeatailsActionPerformed(evt);
+            }
+        });
 
         btnDeleteAccount.setText("Delete Account");
+        btnDeleteAccount.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteAccountActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -131,6 +144,39 @@ public class ManageAccountsJPanel extends javax.swing.JPanel {
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
         // TODO add your handling code here:
+            if (!txtSearchBox.getText().isBlank()) {
+
+        String accountNumber = txtSearchBox.getText();
+        Account foundAccount = accountDirectory.searchAccount(accountNumber);
+
+        if (foundAccount != null) {
+
+            ViewAccountJPanel panel = new ViewAccountJPanel(userProcessContainer, accountDirectory, foundAccount);
+            userProcessContainer.add("ViewAccountJPanel", panel);
+
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);
+
+        } else {
+            JOptionPane.showMessageDialog(
+                null,
+                "Account not found. Please check the account number and try again.",
+                "Warning",
+                JOptionPane.WARNING_MESSAGE
+            );
+          }
+
+        } else {
+            JOptionPane.showMessageDialog(
+            null,
+            "Please type the account number to view.",
+            "Warning",
+            JOptionPane.WARNING_MESSAGE
+        );
+    }
+
+        
+        
     }//GEN-LAST:event_btnSearchActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
@@ -139,6 +185,65 @@ public class ManageAccountsJPanel extends javax.swing.JPanel {
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
+
+    private void btnDeleteAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteAccountActionPerformed
+        // TODO add your handling code here:
+        // TODO add your handling code here:
+        int selectedRow = tblAccounts.getSelectedRow();
+
+        if (selectedRow >= 0) {
+
+        int dialogButton = JOptionPane.YES_NO_OPTION;
+        int dialogResult = JOptionPane.showConfirmDialog(
+            null,
+            "Are you sure you want to delete the selected account?",
+            "Warning",
+            dialogButton
+        );
+
+        if (dialogResult == JOptionPane.YES_OPTION) {
+        Account selectedAccount = (Account) tblAccounts.getValueAt(selectedRow, 0);
+        accountDirectory.deleteAccount(selectedAccount);
+        populateTable();
+        }   
+
+        } else {
+        JOptionPane.showMessageDialog(
+            null,
+            "Please select an account from the list.",
+            "Warning",
+            JOptionPane.WARNING_MESSAGE
+        );
+        }
+
+        
+    }//GEN-LAST:event_btnDeleteAccountActionPerformed
+
+    private void btnViewDeatailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewDeatailsActionPerformed
+        // TODO add your handling code here:
+        
+        int selectedRow = tblAccounts.getSelectedRow();
+
+        if (selectedRow >= 0) {
+            Account selectedAccount = (Account) tblAccounts.getValueAt(selectedRow, 0);
+            
+            ViewAccountJPanel panel = new ViewAccountJPanel(userProcessContainer, accountDirectory, selectedAccount);
+            userProcessContainer.add("ViewAccountJPanel", panel);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);
+
+        // We want to open ViewJPanel here for the selected account
+
+        } else {
+        JOptionPane.showMessageDialog(
+            null,
+            "Please select an account from the list to view.",
+            "Warning",
+            JOptionPane.WARNING_MESSAGE
+        );
+        }
+
+    }//GEN-LAST:event_btnViewDeatailsActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -151,4 +256,22 @@ public class ManageAccountsJPanel extends javax.swing.JPanel {
     private javax.swing.JTable tblAccounts;
     private javax.swing.JTextField txtSearchBox;
     // End of variables declaration//GEN-END:variables
+
+    public void populateTable() {
+
+    DefaultTableModel model = (DefaultTableModel) tblAccounts.getModel();
+    model.setRowCount(0);
+
+    for (Account a : accountDirectory.getAccounts()) {
+
+        Object[] row = new Object[4];
+        row[0] = a;
+        row[1] = a.getRoutingNumber();
+        row[2] = a.getAccountNumber();
+        row[3] = String.valueOf(a.getBalance());
+
+        model.addRow(row);
+    }
+    }
 }
+

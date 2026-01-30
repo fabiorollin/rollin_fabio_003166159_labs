@@ -15,16 +15,16 @@ import model.AccountDirectory;
  * @author fabio
  */
 public class CreateAccountJPanel extends javax.swing.JPanel {
-    JPanel userProcessContainer;
-    AccountDirectory accountDirectory;
+    private JPanel userProcessContainer;
+    private AccountDirectory accountDirectory;
 
     /**
      * Creates new form CreateAccountJPanel
      */
-    public CreateAccountJPanel(JPanel container, AccountDirectory directory) {
+    public CreateAccountJPanel(JPanel userProcessContainer, AccountDirectory accountDirectory) {
         initComponents();
-        userProcessContainer = container;
-        accountDirectory = directory;
+        this.userProcessContainer = userProcessContainer;
+        this.accountDirectory = accountDirectory;
     }
 
     /**
