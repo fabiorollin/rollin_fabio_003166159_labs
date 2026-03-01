@@ -14,7 +14,7 @@ public class Business {
 
     public Business() {
     
-        masterOrderList = new MasterOderList();     
+        masterOrderList = new MasterOrderList();     
         supplierDirectory = new SupplierDirectory();
 
     }
