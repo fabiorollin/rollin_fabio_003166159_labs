@@ -32,7 +32,11 @@ public class Order {
                 
     }
     
-    public Order findProduct(Product product) {
+    public void deleteItem(OrderItem item){
+        this.orderItemList.remove(item);
+    }
+    
+    public OrderItem findProduct(Product product) {
     for (OrderItem oi : this.getOrderItemList()) {
         if (oi.getProduct().equals(product)) {
             return oi;
