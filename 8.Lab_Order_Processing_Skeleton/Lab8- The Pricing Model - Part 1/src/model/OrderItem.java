@@ -8,7 +8,7 @@ package model;
  *
  * @author fabio
  */
-class OrderItem {
+public class OrderItem {
     
     Product product;
     double salesPrice;
