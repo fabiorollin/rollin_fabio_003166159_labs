@@ -15,7 +15,7 @@ import ui.SupplierRole.LoginSupplierJPanel;
 
 /**
  *
- * @author archil
+ * @author Fabio
  */
 public class MainJFrame extends javax.swing.JFrame {
 

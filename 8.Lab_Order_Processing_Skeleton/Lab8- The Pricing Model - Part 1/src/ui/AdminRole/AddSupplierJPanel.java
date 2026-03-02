@@ -10,7 +10,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Mihir Mehta / Hechen Gao
+ * @author Fabio
  */
 public class AddSupplierJPanel extends javax.swing.JPanel {
 

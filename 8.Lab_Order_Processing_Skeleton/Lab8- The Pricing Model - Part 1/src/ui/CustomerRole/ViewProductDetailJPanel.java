@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Rushabh
+ * @author Fabio
  */
 public class ViewProductDetailJPanel extends javax.swing.JPanel {
     

@@ -9,7 +9,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Mihir Mehta / Hechen Gao
+ * @author Fabio
  */
 public class ViewSupplierJPanel extends javax.swing.JPanel {
 

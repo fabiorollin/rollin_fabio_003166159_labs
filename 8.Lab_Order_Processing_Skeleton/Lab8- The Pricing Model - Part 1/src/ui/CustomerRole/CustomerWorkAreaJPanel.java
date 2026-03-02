@@ -14,7 +14,7 @@ import model.SupplierDirectory;
 
 /**
  *
- * @author Rushabh
+ * @author Fabio
  */
 public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
     

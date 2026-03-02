@@ -7,7 +7,7 @@ package model;
 
 /**
  *
- * @author archil
+ * @author Fabio
  */
 public class Supplier {
 
